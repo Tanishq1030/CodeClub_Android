@@ -1,0 +1,687 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/black"
+    tools:context=".DashboardActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/intro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="-2dp"
+                android:layout_marginTop="-2dp"
+                android:layout_marginRight="-2dp"
+                android:elevation="7dp"
+                android:paddingBottom="30dp">
+
+                <ImageView
+                    android:id="@+id/rel_logo"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="30dp"
+                    android:src="@drawable/logo1"/>
+
+
+                <TextView
+                    android:id="@+id/welcome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rel_logo"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/baloo_bhai"
+                    android:text="Welcome"
+                    android:textColor="@color/white"
+                    android:textSize="30dp" />
+
+                <TextView
+
+                    android:id="@+id/to"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/welcome"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/baloo_bhai"
+                    android:text="to"
+                    android:textColor="@color/white"
+                    android:textSize="25dp" />
+
+                <TextView
+                    android:id="@+id/txt_logo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/to"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="60dp"
+                    android:fontFamily="@font/baloo_bhai_2_medium"
+                    android:gravity="center"
+                    android:textColor="@color/tagline"
+                    android:textSize="30dp"
+                    tools:ignore="MissingConstraints" />
+
+                <View
+                    android:layout_width="250dp"
+                    android:layout_height="5dp"
+                    android:background="@drawable/curved_line"
+                    android:layout_below="@id/txt_logo"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"/>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/intro"
+                android:padding="20dp">
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/m_cd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@color/card_main"
+                    app:cardCornerRadius="10dp">
+
+                    <com.denzcoskun.imageslider.ImageSlider
+                        android:id="@+id/intro_img_slider"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:scrollIndicators="bottom"
+                        app:iss_auto_cycle="true"
+                        app:iss_delay="1000"
+                        app:iss_error_image="@drawable/error"
+                        app:iss_period="1000"
+                        app:iss_title_background="@drawable/gradient"
+                        tools:ignore="MissingClass" />
+
+                </androidx.cardview.widget.CardView>
+
+
+                <TextView
+                    android:id="@+id/txt_intro"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/m_cd"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/baloo_bhai_2_medium"
+                    android:justificationMode="inter_word"
+                    android:minHeight="200dp"
+                    android:text="@string/intro"
+                    android:textColor="@color/white"
+                    android:textSize="16dp" />
+
+
+
+
+                <RelativeLayout
+                    android:id="@+id/upcomming_cd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txt_intro"
+                    android:layout_marginTop="20dp"
+                    android:minHeight="320dp">
+
+                    <TextView
+
+                        android:id="@+id/txt_up_t"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/inter_extrabold"
+                        android:gravity="center"
+                        android:text="Up Comming Event"
+                        android:textColor="#00FFE6"
+                        android:textSize="20dp" />
+
+                    <RelativeLayout
+
+                        android:id="@+id/rel_card_dec1"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/txt_up_t"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/card_deco_line1" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_below="@id/rel_card_dec1"
+                        android:id="@+id/up_img_cd"
+                        app:cardCornerRadius="10dp"
+                        android:elevation="2dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp">
+
+                            <pl.droidsonroids.gif.GifImageView
+                                android:id="@+id/up_img"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/community_profile_card"
+                                android:scaleType="centerCrop" />
+
+                            <ImageView
+                                android:id="@+id/btn_pickimg"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginRight="5dp"
+                                android:background="@drawable/img_edit_btn_bg"
+                                android:elevation="5dp"
+                                android:padding="12dp"
+                                android:src="@drawable/edit_img_profile" />
+                        </RelativeLayout>
+
+
+
+                    </androidx.cardview.widget.CardView>
+
+
+                    <EditText
+                        android:id="@+id/edt_des_up_img"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/up_img_cd"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:background="@android:color/transparent"
+                        android:fontFamily="@font/baloo_bhai_2_medium"
+                        android:gravity="center"
+                        android:text="Launch of Coding Crafters Application \n at 2 pm android lab"
+                        android:textColor="@color/white"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+
+
+                    <ProgressBar
+                        android:id="@+id/upcomming_btn_prg"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginRight="25dp"
+                        android:layout_below="@id/edt_des_up_img"
+                        android:layout_alignParentRight="true"
+                        android:visibility="gone"
+                        android:layout_alignParentBottom="true"
+                        android:progressBackgroundTint="@color/teal_200"
+                        android:elevation="2dp"
+                        />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_upload_up_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:layout_below="@id/edt_des_up_img"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/std_btn"
+                        android:capitalize="none"
+                        android:fontFamily="@font/inter_extrabold"
+                        android:text="Upload"
+                        android:textSize="10dp"
+                        />
+
+                </RelativeLayout>
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/paymentbtn"
+                    android:visibility="gone"
+                    android:layout_marginTop="30dp"
+                    android:layout_below="@id/upcomming_cd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Payment"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/inter_extrabold"
+                    android:background="@drawable/community_profile_card"
+                    />
+
+
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:minHeight="150dp"
+                    android:paddingBottom="20dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:padding="15dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical"
+                    android:id="@+id/lin_gform"
+                    android:gravity="center_horizontal"
+                    android:layout_below="@id/paymentbtn"
+                    android:layout_width="match_parent"
+                    android:background="@drawable/guide_txt_outline"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Register for the event"
+                        android:textColor="@color/white"
+                        android:id="@+id/gformtxt"
+                        android:fontFamily="@font/baloo_bhai_2_medium"
+                        android:textSize="16dp"
+                        />
+
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_marginTop="20dp"
+                        android:id="@+id/open_web"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/baloo_bhai_2_medium"
+                        android:textColor="@color/background"
+                        android:textAllCaps="false"
+                        android:layout_width="match_parent"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:layout_height="wrap_content"
+                        android:text="Open"
+                        android:textSize="16dp"
+                        android:background="@drawable/std_btn"/>
+
+                    <LinearLayout
+                        android:id="@+id/gformcontrols"
+                        android:layout_marginTop="10dp"
+                        android:padding="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="2"
+                        >
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:textAllCaps="false"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="upload url"
+                            android:background="@drawable/std_btn"
+                            android:layout_marginEnd="10dp"
+                            android:id="@+id/gfrom_url_upload"
+                            android:layout_weight="1"/>
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:textAllCaps="false"
+                            android:layout_marginStart="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/red_logout_btn_bg"
+                            android:text="Delete"
+                            android:id="@+id/gfrom_url_delete"
+                            android:layout_weight="1"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txt_men"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/lin_gform"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/inter_extrabold"
+                    android:gravity="center"
+                    android:text="Objective"
+                    android:textColor="@color/white"
+                    android:textSize="25dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:background="#cfaffe"
+                    android:layout_below="@id/txt_men"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"/>
+
+                <RelativeLayout
+                    android:id="@+id/rel_line_teal"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/txt_men"
+                    android:layout_marginTop="10dp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rel_line_teal"
+                    android:layout_marginTop="20dp">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:layout_width="120dp"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/rel_bg2"
+                                android:src="@drawable/il5" />
+
+                            <RelativeLayout
+                                android:layout_width="200dp"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true">
+
+                                <TextView
+                                    android:id="@+id/p_txt1"
+                                    android:layout_width="200dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="20dp"
+                                    android:fontFamily="@font/baloo_bhai_2_medium"
+                                    android:text="Structured Learning Environment"
+                                    android:textAlignment="textStart"
+                                    android:textColor="@color/textColor"
+                                    android:textSize="18dp"
+                                    android:textStyle="bold" />
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_below="@id/p_txt1"
+                                    android:layout_marginTop="10dp"
+                                    android:background="#aab0f1" />
+                            </RelativeLayout>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:layout_width="120dp"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentRight="true"
+                                android:background="@drawable/rel_bg2"
+                                android:padding="10dp"
+                                android:src="@drawable/il8" />
+
+                            <RelativeLayout
+                                android:layout_width="200dp"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true">
+
+                                <TextView
+                                    android:id="@+id/p_txt2"
+                                    android:layout_width="200dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="20dp"
+                                    android:fontFamily="@font/baloo_bhai_2_medium"
+                                    android:text="Hands on Experiance"
+                                    android:textAlignment="textStart"
+                                    android:textColor="@color/textColor"
+                                    android:textSize="18dp"
+                                    android:textStyle="bold" />
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_below="@id/p_txt2"
+                                    android:layout_marginTop="10dp"
+                                    android:background="#aab0f1" />
+                            </RelativeLayout>
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:layout_width="120dp"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/rel_bg2"
+                                android:src="@drawable/il7" />
+
+                            <RelativeLayout
+                                android:layout_width="200dp"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true">
+
+                                <TextView
+                                    android:id="@+id/p_txt3"
+                                    android:layout_width="200dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="20dp"
+                                    android:fontFamily="@font/baloo_bhai_2_medium"
+                                    android:text="Peer Learning and Collaboration"
+                                    android:textAlignment="textStart"
+                                    android:textColor="@color/textColor"
+                                    android:textSize="18dp"
+                                    android:textStyle="bold" />
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_below="@id/p_txt3"
+                                    android:layout_marginTop="10dp"
+                                    android:background="#aab0f1" />
+                            </RelativeLayout>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:layout_width="120dp"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentRight="true"
+                                android:background="@drawable/rel_bg2"
+                                android:padding="10dp"
+                                android:src="@drawable/il2" />
+
+                            <RelativeLayout
+                                android:layout_width="200dp"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true">
+
+                                <TextView
+                                    android:id="@+id/p_txt4"
+                                    android:layout_width="200dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="20dp"
+                                    android:fontFamily="@font/baloo_bhai_2_medium"
+                                    android:text="Access to Resources"
+                                    android:textAlignment="textStart"
+                                    android:textColor="@color/textColor"
+                                    android:textSize="18dp"
+                                    android:textStyle="bold" />
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_below="@id/p_txt4"
+                                    android:layout_marginTop="10dp"
+                                    android:background="#aab0f1" />
+                            </RelativeLayout>
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:layout_width="120dp"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/rel_bg2"
+                                android:padding="10dp"
+                                android:src="@drawable/il9" />
+
+                            <RelativeLayout
+                                android:layout_width="200dp"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true">
+
+                                <TextView
+                                    android:id="@+id/p_txt5"
+                                    android:layout_width="200dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="20dp"
+                                    android:fontFamily="@font/baloo_bhai_2_medium"
+                                    android:text="Learn Technical Skills"
+                                    android:textAlignment="textStart"
+                                    android:textColor="@color/textColor"
+                                    android:textSize="18dp"
+                                    android:textStyle="bold" />
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_below="@id/p_txt5"
+                                    android:layout_marginTop="10dp"
+                                    android:background="#aab0f1" />
+                            </RelativeLayout>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:layout_width="120dp"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentRight="true"
+                                android:background="@drawable/rel_bg2"
+                                android:padding="10dp"
+                                android:src="@drawable/il3" />
+
+                            <RelativeLayout
+                                android:layout_width="200dp"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true">
+
+                                <TextView
+                                    android:id="@+id/p_txt6"
+                                    android:layout_width="200dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="20dp"
+                                    android:fontFamily="@font/baloo_bhai_2_medium"
+                                    android:text="Social Skills"
+                                    android:textAlignment="textStart"
+                                    android:textColor="@color/textColor"
+                                    android:textSize="18dp"
+                                    android:textStyle="bold" />
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_below="@id/p_txt6"
+                                    android:layout_marginTop="10dp"
+                                    android:background="#aab0f1" />
+                            </RelativeLayout>
+
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:layout_below="@id/content"
+                android:background="@color/white">
+
+                <TextView
+                    android:elevation="1dp"
+                    android:layout_above="@id/gif_main"
+                    android:layout_marginBottom="-20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/architects_daughter"
+                    android:gravity="center"
+                    android:text="Let's Learn Together Grow Together"
+                    android:textColor="#000"
+                    android:textSize="25dp"
+                    android:textStyle="bold" />
+
+                <pl.droidsonroids.gif.GifImageView
+                    android:id="@+id/gif_main"
+                    android:layout_width="300dp"
+                    android:layout_height="300dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerInParent="true"
+                    android:background="#fff"
+                    android:src="@drawable/team2" />
+
+                <TextView
+                    android:id="@+id/main_about"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_extrabold"
+                    android:text="About"
+                    android:drawablePadding="10dp"
+                    android:gravity="center_vertical"
+                    android:textColor="#000"
+                    android:drawableStart="@drawable/baseline_info_outline_24"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    android:elevation="2dp"
+                    android:textSize="16dp"
+                    android:layout_marginBottom="20dp"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</FrameLayout>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".MemberRegActivity">
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp">
+
+        <!-- Previous Page -->
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_arrow"
+            android:contentDescription="Back"
+            android:layout_margin="25dp"/>
+
+        <!-- SignUp Title -->
+        <TextView
+            android:id="@+id/tvSignUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign Up"
+            android:textSize="28sp"
+            android:textColor="#FFF"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="75dp"/>
+
+        <!-- Username -->
+        <EditText
+            android:id="@+id/etUsername"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/tvSignUp"
+            android:layout_marginTop="30dp"
+            android:hint="Enter Username"
+            android:background="@drawable/edittext_hover_effect"
+            android:textColorHint="#121212"
+            android:textColor="#121212"
+            android:padding="10dp"/>
+
+        <!-- Phone Number -->
+        <EditText
+            android:id="@+id/etPhoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/etUsername"
+            android:layout_marginTop="10dp"
+            android:hint="Enter Phone Number"
+            android:inputType="phone"
+            android:background="@drawable/edittext_hover_effect"
+            android:textColorHint="#121212"
+            android:textColor="#121212"
+            android:padding="10dp"/>
+
+        <!-- Email Input -->
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/etPhoneNumber"
+            android:layout_marginTop="10dp"
+            android:hint="Enter Email"
+            android:background="@drawable/edittext_hover_effect"
+            android:textColorHint="#121212"
+            android:textColor="#121212"
+            android:padding="10dp"/>
+
+        <!-- Password Input -->
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/etEmail"
+            android:layout_marginTop="10dp"
+            android:hint="Enter Password"
+            android:inputType="textPassword"
+            android:background="@drawable/edittext_hover_effect"
+            android:textColorHint="#121212"
+            android:textColor="#121212"
+            android:padding="10dp"/>
+
+        <!-- Designation Input -->
+        <Spinner
+            android:id="@+id/spinDesignation"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/etPassword"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/spinner_hover_effect"
+            android:padding="5dp"/>
+
+        <!-- Year Input -->
+        <Spinner
+            android:id="@+id/spinnerYear"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/spinDesignation"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/spinner_hover_effect"
+            android:padding="5dp"/>
+
+        <!-- Login Button -->
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/spinnerYear"
+            android:layout_marginTop="30dp"
+            android:layout_centerHorizontal="true"
+            android:backgroundTint="#FFF"
+            android:text="SIGN UP"
+            android:textStyle="bold"
+            android:textColor="#121212"/>
+
+        <!-- Signup Text -->
+        <TextView
+            android:id="@+id/tvSignup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnLogin"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:text="Already have an account? Login"
+            android:textSize="14sp"
+            android:textColor="#FFF"
+            android:textStyle="bold"/>
+
+    </RelativeLayout>
+
+
+
+</FrameLayout>

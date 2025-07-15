@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".LoginActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp">
+        <!--android:background="@drawable/gradient_background"-->
+
+        <!-- Login Title -->
+        <TextView
+            android:id="@+id/tvLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:textSize="28sp"
+            android:textColor="#FFFFFFFF"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="90dp"/>
+
+        <!-- Email Input -->
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/tvLogin"
+            android:layout_marginTop="50dp"
+            android:hint="Enter Email"
+            android:background="@drawable/edittext_hover_effect"
+            android:textColorHint="#121212"
+            android:textColor="#121212"
+            android:padding="10dp"/>
+
+        <!-- Password Input -->
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/etEmail"
+            android:layout_marginTop="20dp"
+            android:hint="Enter Password"
+            android:inputType="textPassword"
+            android:background="@drawable/edittext_hover_effect"
+            android:textColorHint="#121212"
+            android:textColor="#121212"
+            android:padding="10dp"/>
+
+        <!-- Forgot Password -->
+        <TextView
+            android:id="@+id/tvForgotPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/etPassword"
+            android:layout_marginTop="25dp"
+            android:layout_centerHorizontal="true"
+            android:text="Forgot Password?"
+            android:textSize="14sp"
+            android:textColor="#FFFFFFFF"
+            android:textStyle="bold"/>
+
+        <!-- Login Button -->
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/tvForgotPassword"
+            android:layout_marginTop="25dp"
+            android:layout_centerHorizontal="true"
+            android:backgroundTint="@color/white"
+            android:text="LOGIN"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+
+
+        <!-- Signup Text -->
+        <TextView
+            android:id="@+id/tvSignup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnLogin"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:text="New User? Sign Up"
+            android:textSize="14sp"
+            android:textColor="#FFFFFFFF"
+            android:textStyle="bold"/>
+    </RelativeLayout>
+
+</FrameLayout>

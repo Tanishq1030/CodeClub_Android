@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Hover state -->
+    <item android:state_hovered="true">
+        <shape android:shape="rectangle">
+            <solid android:color="#FFFFFF" /> <!-- white bg -->
+            <stroke android:width="4dp" android:color="#2196F3" /> <!-- blue border -->
+            <corners android:radius="20dp" />
+        </shape>
+    </item>
+
+    <!-- Default state -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#FFFFFF" />
+            <stroke android:width="4dp" android:color="#FFFFFF" /> <!-- white border -->
+            <corners android:radius="20dp" />
+        </shape>
+    </item>
+
+</selector>
